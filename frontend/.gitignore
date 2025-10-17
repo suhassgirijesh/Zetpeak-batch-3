@@ -9,15 +9,12 @@ lerna-debug.log*
 
 # Dependencies
 node_modules
-package.json
 dist
 dist-ssr
 *.local
-package-lock.json
-yarn.lock
-
-# Package files (if you want to exclude them)
-# package.json
+# Note: package.json should be committed, only lock files are optional
+# package-lock.json
+# yarn.lock
 
 # Environment variables
 .env

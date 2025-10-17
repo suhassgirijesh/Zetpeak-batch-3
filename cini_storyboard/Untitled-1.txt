@@ -1,6 +1,0 @@
-
-4. **Enter your credentials** (username and password) that you created with the `createsuperuser` command
-
-5. **Click "Log in"** to access the Django admin interface
-
-If you need to view Django-related output or logs while working with the admin interface, you can use the **Python: Show Output** command.

@@ -1,0 +1,44 @@
+.storyboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .storyboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.storyboard-panel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1rem;
+}
+.storyboard-image-container {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5e7eb;
+  border-radius: 8px;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+.storyboard-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.storyboard-desc {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.storyboard-dialogue {
+  color: #374151;
+  white-space: pre-line;
+}

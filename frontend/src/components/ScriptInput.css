@@ -1,0 +1,51 @@
+.script-input-form {
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.script-input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.script-input-textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+.script-input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.script-input-select-label {
+  margin-right: 0.5rem;
+}
+.script-input-select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+}
+.script-input-button {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.script-input-button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+.script-input-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}

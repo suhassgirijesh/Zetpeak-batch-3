@@ -1,0 +1,63 @@
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  text-align: center;
+}
+
+.landing-content {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.landing-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #c3a1f9;
+}
+
+.landing-subtitle {
+  font-size: 1.2rem;
+  color: #a0a0b0;
+  margin-bottom: 3rem;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.landing-btn {
+  padding: 0.8rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #7e57c2;
+  color: #ffffff;
+  border: 2px solid #7e57c2;
+}
+
+.login-btn:hover {
+  background-color: #673ab7;
+}
+
+.signup-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.signup-btn:hover {
+  background-color: #ffffff;
+  color: #1e1e2f;
+}

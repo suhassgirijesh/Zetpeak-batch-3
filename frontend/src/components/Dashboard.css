@@ -1,0 +1,308 @@
+body {
+  background: #10131a;
+  color: #f8fafc;
+}
+.dashboard-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 0 2rem;
+}
+.dashboard-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.dashboard-desc {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.dashboard-create-btn {
+  background: #fbbf24;
+  color: #181c24;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+}
+.dashboard-create-btn:hover {
+  background: #f59e42;
+}
+.dashboard-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Project Card Styles */
+.project-card {
+  background: #181c24;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+  padding: 1.5rem;
+  min-width: 320px;
+  flex: 1 1 320px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.project-card-header {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.project-card-img-placeholder {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.project-card-img-placeholder::before {
+  content: "🎬 Storyboard";
+}
+
+.project-card-delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.project-card:hover .project-card-delete-btn {
+  opacity: 1;
+}
+
+.project-card-delete-btn:hover {
+  background: rgba(239, 68, 68, 1);
+  transform: scale(1.1);
+}
+
+.project-card-info {
+  flex: 1;
+}
+
+.project-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+}
+
+.project-card-date {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.project-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.project-card-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  text-align: center;
+}
+
+.project-card-btn.view {
+  background: #fbbf24;
+  color: #181c24;
+}
+
+.project-card-btn.view:hover {
+  background: #f59e42;
+}
+
+.project-card-btn.export {
+  background: transparent;
+  color: #cbd5e1;
+  border: 1px solid #374151;
+}
+
+.project-card-btn.export:hover {
+  background: #374151;
+  color: #f8fafc;
+}
+.dashboard-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.dashboard-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.dashboard-badge {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.2rem 0.9rem;
+  border-radius: 12px;
+  color: #fff;
+  background: #6366f1;
+  margin-left: 0.5rem;
+}
+.dashboard-badge.purple { background: #a78bfa; }
+.dashboard-badge.blue { background: #2563eb; }
+.dashboard-badge.indigo { background: #6366f1; }
+.dashboard-card-desc {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+.dashboard-card-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.dashboard-meta {
+  color: #fbbf24;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.dashboard-view-link {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+.dashboard-view-link:hover {
+  color: #f59e42;
+}
+
+/* Loading and Error States */
+.dashboard-loading, .dashboard-error {
+  text-align: center;
+  padding: 3rem;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.dashboard-error p {
+  margin-bottom: 1rem;
+  color: #ef4444;
+}
+
+.dashboard-retry-btn {
+  background: #fbbf24;
+  color: #181c24;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dashboard-retry-btn:hover {
+  background: #f59e42;
+}
+
+.create-error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Storyboard Links Styles */
+.project-storyboards {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: #0f1219;
+  border-radius: 8px;
+  border: 1px solid #374151;
+}
+
+.storyboards-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #fbbf24;
+}
+
+.storyboards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.storyboard-link {
+  display: inline-block;
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.storyboard-link:hover {
+  background: #1e3a8a;
+  color: #93c5fd;
+}
+
+.storyboards-more {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #fbbf24;
+}

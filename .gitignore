@@ -1,0 +1,184 @@
+# CiniKraft .gitignore
+
+# ==============================================
+# Environment Variables (NEVER COMMIT!)
+# ==============================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+frontend/.env
+
+# ==============================================
+# Python / Django
+# ==============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Django specific
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static/
+*.pot
+local_settings.py
+
+# ==============================================
+# Node / React / Frontend
+# ==============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+.next/
+out/
+
+# Lock files (optional - some teams keep these)
+# package-lock.json
+# yarn.lock
+
+# ==============================================
+# IDEs and Editors
+# ==============================================
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ==============================================
+# Operating System
+# ==============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+
+# ==============================================
+# Testing
+# ==============================================
+coverage/
+.coverage
+.coverage.*
+*.cover
+htmlcov/
+.pytest_cache/
+.hypothesis/
+
+# ==============================================
+# Temporary Files
+# ==============================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+
+# ==============================================
+# AI / ML Models (large files)
+# ==============================================
+*.h5
+*.pkl
+*.pth
+*.pt
+*.onnx
+models/
+checkpoints/
+
+# ==============================================
+# Uploads / User Content
+# ==============================================
+uploads/
+user_uploads/
+generated_images/
+storyboard_exports/
+
+# ==============================================
+# Documentation Build
+# ==============================================
+docs/_build/
+site/
+
+# ==============================================
+# Misc
+# ==============================================
+*.bak
+*.orig
+.eslintcache
+.stylelintcache
+
+# ==============================================
+# Temporary Documentation (exclude from commits)
+# ==============================================
+*_FIX.md
+*_GUIDE.md
+*_SUMMARY.md
+*_COMPLETE.md
+PROFILE_FEATURE_*.md
+PROFILE_QUICK_*.md
+PROFILE_IMPLEMENTATION_*.md
+REPOSITORY_SETUP_*.md
+
+# Keep essential documentation
+!README.md
+!SETUP_GUIDE.md
+!CONTRIBUTING.md
+!DEPLOYMENT.md
+
+# ==============================================
+# Test Files
+# ==============================================
+test_*.py
+*_test.py
+test_*.ps1
+test-*.js
+test-*.html
+demo*.py
+scratch*.py

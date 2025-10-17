@@ -1,0 +1,126 @@
+body {
+  background: #10131a;
+  color: #f8fafc;
+}
+.viewer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 0 2rem;
+}
+.back-link {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  font-size: 1.1rem;
+}
+.viewer-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.viewer-desc {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+.viewer-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.viewer-card {
+  background: #181c24;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 320px;
+  flex: 1 1 320px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.viewer-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.viewer-edit {
+  color: #fbbf24;
+  cursor: pointer;
+}
+.viewer-image-box {
+  background: #23283a;
+  border-radius: 12px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.viewer-image-placeholder {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.viewer-aspect {
+  color: #fbbf24;
+  margin-left: 0.5rem;
+}
+.viewer-desc-main {
+  color: #f8fafc;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+.viewer-notes-label {
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.viewer-notes {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #23283a;
+  background: #23283a;
+  color: #f8fafc;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+.viewer-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.viewer-aspect-select {
+  background: #23283a;
+  color: #f8fafc;
+  border: 1px solid #23283a;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1.05rem;
+}
+.viewer-export {
+  background: #fbbf24;
+  color: #181c24;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.viewer-export:hover {
+  background: #f59e42;
+}

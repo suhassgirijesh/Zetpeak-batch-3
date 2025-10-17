@@ -1,0 +1,27 @@
+# Django Backend Requirements for Cini Storyboard Generator
+
+# Core Django packages
+Django>=4.2.0
+djangorestframework>=3.14.0
+django-cors-headers>=4.0.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# AI and Image Processing
+Pillow>=10.0.0
+openai>=1.0.0
+huggingface-hub>=0.17.0
+requests>=2.31.0
+
+# Document generation
+reportlab>=4.0.0
+python-pptx>=0.6.0
+
+# Database (SQLite is included with Django by default)
+# For PostgreSQL: psycopg2-binary>=2.9.0
+# For MySQL: mysqlclient>=2.1.0
+
+# Development tools (optional)
+# django-debug-toolbar>=4.0.0
+# django-extensions>=3.2.0

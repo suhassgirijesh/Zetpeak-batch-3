@@ -3,7 +3,7 @@
   min-height: 100vh;
   background: var(--bg-primary);
   padding: 2rem;
-  padding-top: 100px;
+  box-sizing: border-box;
 }
 
 .profile-loading {
@@ -344,8 +344,8 @@
 .form-input,
 .form-textarea {
   padding: 0.875rem 1rem;
-  background: rgba(17, 24, 39, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   color: var(--text-primary);
   font-size: 0.95rem;
@@ -357,8 +357,8 @@
 .form-textarea:focus {
   outline: none;
   border-color: var(--primary);
-  background: rgba(17, 24, 39, 0.7);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background: rgba(6, 182, 212, 0.05);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
 }
 
 .form-input:disabled {
@@ -382,7 +382,7 @@
   gap: 1rem;
   justify-content: flex-end;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* Preferences */
@@ -398,16 +398,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  background: rgba(17, 24, 39, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   transition: all 0.3s ease;
 }
 
 .preference-item:hover {
-  background: rgba(17, 24, 39, 0.5);
-  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(6, 182, 212, 0.3);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .preference-info h4 {
@@ -424,8 +425,8 @@
 
 .preference-select {
   padding: 0.625rem 2.5rem 0.625rem 1rem;
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   color: var(--text-primary);
   font-size: 0.9rem;
@@ -439,13 +440,13 @@
 
 .preference-select:hover {
   border-color: var(--primary);
-  background: rgba(17, 24, 39, 1);
+  background: rgba(6, 182, 212, 0.05);
 }
 
 .preference-select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
 }
 
 /* Toggle Switch */

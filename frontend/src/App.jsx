@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
+import AllProjects from "./components/AllProjects";
 import CreateProject from "./components/CreateProject";
 import StoryboardViewer from "./components/StoryboardViewer";
 import ScriptInput from "./components/ScriptInput";
@@ -24,13 +25,14 @@ export default function App() {
 
   return (
     <Router>
-      <Header />
+      <Sidebar />
       <div>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/projects" element={<AllProjects />} />
           <Route path="/create" element={<CreateProject />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/project/:projectId" element={<ProjectDetail />} />

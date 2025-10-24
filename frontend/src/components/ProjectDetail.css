@@ -4,9 +4,10 @@
 
 .project-detail-page {
   min-height: 100vh;
-  padding: 6rem 2rem 4rem;
+  padding: 2rem 2rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -75,6 +76,58 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* CiniKraft wireframe adjustments */
+.ck-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+.project-detail-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.project-actions .btn {
+  padding: 0.6rem 1rem;
+}
+
+.project-actions .btn.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 8px 24px rgba(6,182,212,0.08);
+}
+
+.project-script-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.storyboards-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap: 1rem; }
+
+.storyboard-card {
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.storyboard-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+
+.preview-image { border-radius: 12px; width: 100%; height: 160px; object-fit: cover; }
+
+.status-badge { padding: 0.25rem 0.6rem; border-radius: 999px; font-weight: 700; font-size: 0.8rem; }
+.status-badge.completed { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+.status-badge.in-progress { background: rgba(59,130,246,0.08); color: var(--brand-blue); }
+.status-badge.draft { background: rgba(250,204,21,0.08); color: #f59e0b; }
 
 /* Script Section */
 .project-script-section {

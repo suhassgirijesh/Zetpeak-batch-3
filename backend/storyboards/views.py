@@ -7,6 +7,7 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import User
 from .models import Project, Storyboard, UserProfile
+from .serializers import UserSerializer
 from .serializers import (
     GenerateStoryboardSerializer, 
     GenerateStoryboardResponseSerializer,
@@ -224,3 +225,18 @@ class ProjectDetailView(APIView):
         project = get_object_or_404(Project, id=pk)
         project.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CurrentUserView(APIView):
+    """Get current user information"""
+    
+    def get(self, request, *args, **kwargs):
+        # For now, return the testuser as default
+        # In production, this would use request.user from JWT authentication
+        user, created = User.objects.get_or_create(
+            username='testuser', 
+            defaults={'email': 'test@example.com'}
+        )
+        serializer = UserSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)

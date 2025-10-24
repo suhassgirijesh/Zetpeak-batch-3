@@ -3,6 +3,9 @@ from . import views
 from .export_views import ExportPDFView, ExportPPTXView
 
 urlpatterns = [
+    # User endpoints
+    path('user/me/', views.CurrentUserView.as_view(), name='current_user'),
+    
     # Project endpoints
     path('projects/', views.ProjectListCreateView.as_view(), name='project_list_create'),
     path('projects/<uuid:pk>/', views.ProjectDetailView.as_view(), name='project_detail'),

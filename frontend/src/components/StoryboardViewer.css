@@ -1,14 +1,11 @@
-body {
-  background: #10131a;
-  color: #f8fafc;
-}
 .viewer-main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2.5rem 2rem 0 2rem;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 .back-link {
-  color: #fbbf24;
+  color: var(--accent-orange);
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -21,7 +18,7 @@ body {
   margin-bottom: 0.2rem;
 }
 .viewer-desc {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
 }
@@ -32,17 +29,19 @@ body {
   margin-bottom: 2rem;
 }
 .viewer-card {
-  background: #181c24;
-  border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.13);
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  min-width: 320px;
-  flex: 1 1 320px;
-  max-width: 370px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 1.5rem;
+  min-width: 280px;
+  flex: 1 1 300px;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
+.viewer-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
 .viewer-card-header {
   display: flex;
   justify-content: space-between;
@@ -52,11 +51,11 @@ body {
   font-weight: 600;
 }
 .viewer-edit {
-  color: #fbbf24;
+  color: var(--accent-orange);
   cursor: pointer;
 }
 .viewer-image-box {
-  background: #23283a;
+  background: var(--bg-tertiary);
   border-radius: 12px;
   min-height: 140px;
   display: flex;
@@ -65,23 +64,23 @@ body {
   margin-bottom: 1rem;
 }
 .viewer-image-placeholder {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 .viewer-aspect {
-  color: #fbbf24;
+  color: var(--accent-orange);
   margin-left: 0.5rem;
 }
 .viewer-desc-main {
-  color: #f8fafc;
+  color: var(--text-primary);
   font-size: 1.05rem;
   margin-bottom: 1.2rem;
 }
 .viewer-notes-label {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   font-size: 1rem;
   margin-bottom: 0.3rem;
 }
@@ -89,9 +88,9 @@ body {
   width: 100%;
   padding: 0.7rem 1rem;
   border-radius: 8px;
-  border: 1px solid #23283a;
-  background: #23283a;
-  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -103,24 +102,26 @@ body {
   margin-top: 1.5rem;
 }
 .viewer-aspect-select {
-  background: #23283a;
-  color: #f8fafc;
-  border: 1px solid #23283a;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 0.5rem 1rem;
   font-size: 1.05rem;
 }
 .viewer-export {
-  background: #fbbf24;
-  color: #181c24;
-  font-weight: 600;
+  background: var(--gradient-secondary);
+  color: white;
+  font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 0.7rem 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(59,130,246,0.12);
 }
 .viewer-export:hover {
-  background: #f59e42;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(59,130,246,0.18);
 }

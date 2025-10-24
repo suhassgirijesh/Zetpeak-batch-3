@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #181c24;
+  background: var(--bg-secondary);
   padding: 1rem 2rem;
-  border-bottom: 1px solid #23283a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .header-left {
   display: flex;
@@ -13,7 +13,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin-right: 2rem;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@
   gap: 1.5rem;
 }
 .nav-link {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
@@ -35,19 +35,19 @@
   transition: background 0.2s, color 0.2s;
 }
 .nav-link.active, .nav-link:hover {
-  background: #23283a;
-  color: #fbbf24;
+  background: var(--bg-tertiary);
+  color: var(--accent-orange);
 }
 .get-started {
-  background: #fbbf24;
-  color: #181c24;
+  background: var(--accent-orange);
+  color: var(--bg-primary);
   font-weight: 600;
   border: none;
   border-radius: 6px;
   padding: 0.5rem 1.2rem;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: var(--shadow-sm);
   transition: background 0.2s;
 }
 .get-started:hover {

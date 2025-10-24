@@ -1,6 +1,6 @@
 body {
-  background: #10131a;
-  color: #f8fafc;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 .create-main {
   max-width: 700px;
@@ -8,7 +8,7 @@ body {
   padding: 2.5rem 2rem 0 2rem;
 }
 .back-link {
-  color: #fbbf24;
+  color: var(--accent-orange);
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -21,14 +21,14 @@ body {
   margin-bottom: 0.2rem;
 }
 .create-desc {
-  color: #cbd5e1;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
 }
 .create-form {
-  background: #181c24;
+  background: var(--bg-secondary);
   border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+  box-shadow: var(--shadow-md);
   padding: 2rem 2rem 1.5rem 2rem;
 }
 .create-fieldset {
@@ -40,7 +40,7 @@ body {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
-  color: #fbbf24;
+  color: var(--accent-orange);
 }
 .create-label {
   display: block;
@@ -52,9 +52,9 @@ body {
   width: 100%;
   padding: 0.7rem 1rem;
   border-radius: 8px;
-  border: 1px solid #23283a;
-  background: #23283a;
-  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -65,8 +65,8 @@ body {
   gap: 1.2rem;
 }
 .create-cancel {
-  background: #23283a;
-  color: #f8fafc;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   border: none;
   border-radius: 8px;
   padding: 0.7rem 1.5rem;
@@ -76,11 +76,11 @@ body {
   transition: background 0.2s;
 }
 .create-cancel:hover {
-  background: #181c24;
+  background: var(--bg-secondary);
 }
 .create-submit {
-  background: #fbbf24;
-  color: #181c24;
+  background: var(--accent-orange);
+  color: var(--bg-primary);
   font-weight: 600;
   border: none;
   border-radius: 8px;

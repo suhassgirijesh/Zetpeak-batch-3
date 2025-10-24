@@ -46,7 +46,7 @@ echo ============================================
 echo   Starting Backend Server (Django)
 echo ============================================
 echo.
-start cmd /k "title Backend Server && python manage.py runserver"
+start cmd /k "title Backend Server && cd backend && python manage.py runserver"
 
 echo Waiting 3 seconds for backend to start...
 timeout /t 3 /nobreak >nul

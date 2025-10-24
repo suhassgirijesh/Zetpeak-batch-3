@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Header.modern.css";
 import { supabase } from "../supabaseClient";
+import djangoApiService from "../services/djangoApi";
 
 export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
   const isAuthenticated = !!localStorage.getItem("token");
+  // Consider authenticated if we have a server-side current user
+  const showAuthenticated = isAuthenticated || !!currentUser;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +23,26 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Fetch current user data (attempt regardless of local token so UI can show server-side user)
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const { data, error } = await djangoApiService.getCurrentUser();
+        console.log('Header: getCurrentUser response', { data, error });
+        if (data && !error) {
+          setCurrentUser(data);
+        } else if (error) {
+          // keep currentUser null but log for debugging
+          console.warn('Header: getCurrentUser error', error);
+        }
+      } catch (err) {
+        console.error('Header: failed to fetch current user', err);
+      }
+    };
+
+    fetchUser();
+  }, []);
+
   // Don't show the header on the landing, login, or signup pages
   if (["/", "/login", "/signup"].includes(location.pathname)) {
     return null;
@@ -27,6 +51,7 @@ export default function Header() {
   const handleLogout = async () => {
     await supabase.auth.signOut();
     localStorage.removeItem("token");
+    setCurrentUser(null);
     navigate("/login");
   };
 
@@ -52,7 +77,7 @@ export default function Header() {
         </Link>
 
         <nav className="header-nav-modern">
-          {isAuthenticated ? (
+          {showAuthenticated ? (
             <>
               <Link 
                 to="/dashboard" 
@@ -94,8 +119,8 @@ export default function Header() {
                   <div className="user-dropdown glass-effect">
                     <div className="dropdown-header">
                       <div className="user-info">
-                        <div className="user-name">User Account</div>
-                        <div className="user-email">user@example.com</div>
+                        <div className="user-name">{currentUser?.username || 'User Account'}</div>
+                        <div className="user-email">{currentUser?.email || 'user@example.com'}</div>
                       </div>
                     </div>
                     <div className="dropdown-divider"></div>

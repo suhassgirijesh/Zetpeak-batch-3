@@ -134,7 +134,7 @@ class DjangoApiService {
   }
 
   async getCurrentUser() {
-    return this.request('/auth/user/');
+    return this.request('/user/me/');
   }
 }
 

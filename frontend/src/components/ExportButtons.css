@@ -5,7 +5,7 @@
   margin-bottom: 2rem;
 }
 .export-btn {
-  background: #059669;
+  background: var(--accent-green);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -15,11 +15,11 @@
   transition: background 0.2s;
 }
 .export-btn:disabled {
-  background: #a7f3d0;
+  background: var(--primary-200);
   cursor: not-allowed;
 }
 .export-btn.pptx {
-  background: #7c3aed;
+  background: var(--primary-600);
 }
 .export-btn:hover:not(:disabled) {
   filter: brightness(0.95);

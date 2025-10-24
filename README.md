@@ -74,6 +74,9 @@ cd ..
 #### 3️⃣ Backend Setup
 
 ```bash
+# Navigate to backend directory
+cd backend
+
 # Install Python dependencies
 pip install -r django_requirements.txt
 
@@ -85,6 +88,17 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install -r django_requirements.txt
+
+# Run migrations
+python manage.py migrate
+
+# Create superuser (optional, for admin access)
+python create_superuser.py
+# OR
+python manage.py createsuperuser
+
+# Go back to root
+cd ..
 ```
 
 #### 4️⃣ Environment Configuration

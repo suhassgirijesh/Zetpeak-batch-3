@@ -64,8 +64,10 @@ echo "============================================"
 echo ""
 
 # Start backend server
+cd backend
 python3 manage.py runserver &
 BACKEND_PID=$!
+cd ..
 
 echo "Waiting 3 seconds for backend to start..."
 sleep 3
